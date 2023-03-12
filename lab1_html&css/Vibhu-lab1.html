@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-1</title>
+    <style>
+        header{
+            text-align: center;
+            background-color: blueviolet;
+            line-height: 50px;
+            font-weight: bold;
+            text-transform: capitalize;
+            font-size: 32px;
+          
+        }
+        /* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #4b4949;
+  font-family: Arial;
+  position: sticky;
+  height: 50px;
+  width: 1000px;
+}
+
+#navigate{
+            position: sticky;
+            top: 0%;
+            z-index: 1;
+        }
+        .menu{
+            margin: 0%;
+            background-color: rgb(0, 0, 0, 0.5);
+        }
+        .menu li a{
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .menu li{
+            padding: 10px;
+            display: inline-block;
+        }
+        .menu li:hover{
+            background-color: rgba(0, 0, 0, 0.7);;
+        }
+        .menu li:nth-child(2):hover #Dropdown_1, .menu li:nth-child(3):hover #Dropdown_2{
+            display: block;
+        }
+        #Dropdown_1, #Dropdown_2{
+            position: absolute;
+            width: auto;
+            max-width: 150px;
+            display: none;
+            top: 42.5px;
+            background-color: whitesmoke;
+            padding: 0%;
+        }
+        #Dropdown_1 li, #Dropdown_2 li{
+            display: block;
+        }
+        #Dropdown_1 li:hover, #Dropdown_2 li:hover{
+            background-color: gainsboro;
+        }
+        #Dropdown_1 li a, #Dropdown_2 li a{
+            color: steelblue;
+            font-size: 16px;
+        }
+#Bar_graph{
+            background-color: whitesmoke;
+            position: absolute;
+            top: 20%;
+            left: 40%;
+        }
+        #Bar_graph article{
+            display: inline-block;
+        }
+        p{
+            padding-left: 20px;
+        }
+        div{
+            width: 40px;
+            height: 300px;
+            margin: 20px;
+            background-color: rgb(202, 198, 192);
+        }
+        #bar1{
+            width: 100%;
+            height: 70%;
+            background-color: white;
+            animation-name: barplot1;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+        }
+        @keyframes barplot1 {
+            0%{height: 100%;background-color: white;}
+            100%{height: 70%; background-color: white;}
+        }
+        #bar2{
+            width: 100%;
+            height: 60%;
+            background-color: white;
+            animation-name: barplot2;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+        }
+        @keyframes barplot2 {
+            0%{height: 100%;background-color: white;}
+            100%{height: 60%; background-color: white;}
+        }
+        #bar3{
+            width: 100%;
+            height: 20%;
+            background-color: white;
+            animation-name: barplot3;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+        }
+        @keyframes barplot3 {
+            0%{height: 100%;background-color: white;}
+            100%{height: 20%; background-color: white;}
+        }
+
+                            
+</style>
+
+</head>
+<body>
+    <header>Demo of Dropdown</header>
+    
+    <nav id="navigate">
+      <ul class="menu">
+          <li><a href="#">Link 1</a></li>
+          <li>
+              <a href="#">Link 2</a>
+              <ul id="Dropdown_1">
+                  <li><a href="#">DD_link_1</a></li>
+                  <li><a href="#">DD_link_2</a></li>
+                  <li><a href="#">DD_link_3</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">Link 3</a>
+              <ul id="Dropdown_2">
+                  <li><a href="#">DD_link_1</a></li>
+                  <li><a href="#">DD_link_2</a></li>
+                  <li><a href="#">DD_link_3</a></li>
+                  <li><a href="#">DD_link_4</a></li>
+              </ul>
+          </li>
+      </ul>
+  </nav>
+      <section id="Bar_graph">
+        <article>
+            <div>
+                <article id="bar1"></article>
+            </div>
+            <p>30%</p>
+        </article>
+
+        <article>
+            <div>
+                <article id="bar2"></article>
+            </div>
+            <p>40%</p>
+        </article>
+
+        <article>
+            <div>
+                <article id="bar3"></article>
+            </div>
+            <p>80%</p>
+        </article>
+        <h1 style="text-align: center;">Bar Plot</h1>
+    </section>
+</body>
+</html>
